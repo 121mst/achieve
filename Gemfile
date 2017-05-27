@@ -46,4 +46,6 @@ end
 gem 'twitter-bootstrap-rails'
 gem 'jquery-turbolinks'
 
-
+group:development do
+  gem 'letter_opener_web'
+end
