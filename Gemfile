@@ -55,3 +55,7 @@ gem 'devise'
 gem 'rails_12factor', group: :production
 
 gem 'dotenv-rails'
+
+gem 'rails_admin'
+
+gem 'cancan'
