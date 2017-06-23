@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
-  
+
   resources :contacts, only: [:new,:create] do
     collection do
       post :confirm
@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   end
 
   root 'top#index'
+
+  resources :poems, only: [:index]
 
   if Rails.env.development?
     mount LetterOpenerWeb::Engine, at: "/letter_opener"
