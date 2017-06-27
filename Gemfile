@@ -52,6 +52,8 @@ gem 'jquery-turbolinks'
 
 group:development do
   gem 'letter_opener_web'
+
+  gem 'dotenv-rails'
 end
 
 gem 'devise'
@@ -65,3 +67,11 @@ gem 'rails_admin'
 gem 'cancan'
 
 gem 'activeresource'
+
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+
+#image uploader
+gem 'carrierwave'
+gem 'mini_magick'
