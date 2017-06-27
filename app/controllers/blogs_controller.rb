@@ -4,7 +4,7 @@ class BlogsController < ApplicationController
 
   def index
     @blogs = Blog.all
-    render json: @blogs
+    ##render json: @blogs
   end
 
   def new
