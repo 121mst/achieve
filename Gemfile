@@ -68,6 +68,8 @@ gem 'cancan'
 
 gem 'activeresource'
 
+gem 'faker'
+
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'

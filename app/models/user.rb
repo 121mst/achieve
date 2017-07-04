@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
 
   mount_uploader :avatar, AvatarUploader #deviseの設定配下に追記
 
+  has_many :blogs
        def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
          user = User.find_by(email: auth.info.email)
          unless user
