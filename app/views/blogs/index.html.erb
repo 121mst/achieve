@@ -12,8 +12,15 @@
 
       <p>本文:<%= blog.content %></p>
       <p><%= profile_img(blog.user) %></p>
+
       <%= link_to "編集", edit_blog_path(blog.id), data: {confirm: '本当に更新していいですか'}, class: 'btn btn-default btn-sm btn-success' %>
       <%= link_to "削除", blog_path(blog.id), method: :delete, data: { confirm: '本当に削除していいですか？'}, class: 'btn btn-default btn-sm btn btn-danger' %>
+    </br>
+      <%= link_to user_path(blog.user) do %>
+      <p>投稿者：<%= blog.user.name %></p>
+      <% end %>
+
+
     </div>
     <% end %>
   </div>

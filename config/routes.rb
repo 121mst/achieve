@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  get 'relationships/create'
+
+  get 'relationships/destroy'
+
+
+ resources :relationships, only: [:create, :destroy]
+
+
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
   resources :contacts, only: [:new,:create] do
@@ -25,6 +33,8 @@ Rails.application.routes.draw do
     registrations: "users/registrations",
     omniauth_callbacks: "users/omniauth_callbacks"
   }
+
+  resources :users, only: [:index, :show]
 
   resources :blogs do
     resources :comments

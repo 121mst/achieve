@@ -1,0 +1,11 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+hr {
+   border-width: 3px 0px 0px 0px; /* 太さ3px */
+   border-style: dashed; /* 線種を破線に */
+   border-color: gray;   /* 線色を灰色に */
+   height: 1px;         /* 高さ(※古いIE用) */
+}
