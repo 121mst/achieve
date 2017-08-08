@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'relationships/create'
-
-  get 'relationships/destroy'
-
 
  resources :relationships, only: [:create, :destroy]
 
@@ -41,6 +37,9 @@ Rails.application.routes.draw do
     post :confirm, on: :collection
   end
 
+  resources :conversations do
+    resources :messages
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
