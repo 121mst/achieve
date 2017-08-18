@@ -1,0 +1,26 @@
+<div class="container">
+<div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Blogs</h1>
+
+<table>
+  <tbody>
+        <% @blogs.each do |blog| %>
+        <br>
+        <h4><strong><%= blog.title %></strong></h4>
+        <h6><%= blog.content %></h6>
+        <h8>投稿者:<%= blog.user.name %></h8>
+        <br>
+        <%= link_to 'Show', blog, class: 'btn btn-default' %>
+        <%= link_to 'Edit', edit_blog_path(blog), class: 'btn btn-default' %>
+        <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default' %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Blog', new_blog_path, class: 'btn btn-default' %>
+</div>
+</div>
