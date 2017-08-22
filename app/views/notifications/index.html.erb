@@ -1,8 +1,7 @@
-<h2>お知らせ</h2>
+<h2><p class="bg-success text-center">お知らせ</p></h2>
 <ul>
   <% @notifications.each do |notification| %>
   <hr>
-    <li>
       <% if notification.read == false %>
       <span>未読</span>
       <% end %>
@@ -11,6 +10,5 @@
         あなたのブログ（<%= link_to "#{notification.comment.blog.title}", blog_path(notification.comment.blog, notification_id: notification.id) %>）にコメントしました。
       </p>
       <p><%= notification.created_at %></p>
-    </li>
   <% end %>
 </ul>

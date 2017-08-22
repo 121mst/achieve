@@ -18,6 +18,7 @@ def create
            message: 'あなたの作成したブログにコメントが付きました'
          })
        end
+
        Pusher.trigger("user_#{@comment.blog.user_id}_channel", 'notification_created', {
          unread_counts: Notification.where(user_id: @comment.blog.user.id, read: false).count
        })
@@ -25,6 +26,7 @@ def create
        format.html { render :new }
      end
    end
+
  end
 
 
